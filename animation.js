@@ -63,7 +63,7 @@ function smallIdleChangeCards() {
 idleChangeCards();
 
 let countUpNumbers = document.querySelectorAll(".count-up");
-let timeForCountNumbers = 3000;
+let timeForCountNumbers = 2500;
 
 countUpNumbers.forEach((number) => {
     let startValue = 0;

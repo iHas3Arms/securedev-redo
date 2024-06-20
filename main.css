@@ -14,7 +14,14 @@ main {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 100px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .stats {
@@ -46,7 +53,13 @@ main {
 }
 
 .why-choose-us {
-    width: 100%;
+    width: 60%;
     display: flex;
     justify-content: center;
+}
+
+.why-choose-us-img {
+    min-width: 0;
+    aspect-ratio: 1;
+    width: 400px;
 }
