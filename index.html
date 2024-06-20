@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureDev | Home</title>
+    <link rel="icon" href="img/logos/securedev.ico">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="card-animation.css">
+</head>
+<body>
+    <img id="face" src="img/james.jpg" alt="Just my face" style="display:none;">
+    <header>
+        <div class="important">
+            <div class="logo-container">
+                <a id="logo-link" href="index.html"><img id="logo" src="img/logos/SecureDev_Logo.png" alt="SecureDev Ltd."></a>
+            </div>
+            <button id="drop-down-btn" onclick="changeStateOfDropDown()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </button>
+        </div>
+        <nav>
+            <ul id="links">
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Project</a></li>
+                <li><a href="">Our Team</a></li>
+            </ul>
+        </nav>
+        <!-- <ul class="contacts">
+            <li>Facebook: SecureDev LTD</li>
+            <li>Twitter: SecureDev LTD</li>
+            <li>LinkedIn: SecureDev LTD</li>
+            <li>Email: support@securedev.co.uk</li>
+        </ul> -->
+        <button id="contact-btn">Contact</button>
+    </header>
+    
+    <!--MAIN BODY-->
+
+    <main>
+        <div class="wrapper">
+            <div class="card-container">
+                <div class="card" id="card-1"></div>
+                <div class="card" id="card-2"></div>
+                <div class="card" id="card-3"></div>
+                <div class="card" id="card-4"></div>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="a-stat" id="stat-1">
+                <span class="stat-numbers count-up" data-val="245">0</span>
+                <span class="stat-text years-experience">Years Experience</span>
+            </div>
+            <div class="a-stat" id="stat-2">
+                <span class="stat-numbers count-up" data-val="24">0</span>
+                <span class="stat-text team-members">Team Members</span>
+            </div>
+            <div class="a-stat" id="stat-3">
+                <span class="stat-numbers count-up" data-val="52">0</span>
+                <span class="stat-text certifications">Certifications</span>
+            </div>
+            <div class="a-stat" id="stat-4">
+                <span class="stat-numbers count-up" data-val="818">0</span>
+                <span class="stat-text projects-done">Projects Done</span>
+            </div>
+        </div>
+        <div class="why-choose-us">
+            <div class="why-choose-us-text">
+                <h2>Why Choose Us?</h2>
+
+            </div>
+            <div class="why-choose-us-image"></div>
+        </div>
+    </main>
+</body>
+<script src="drop-down.js"></script>
+<script src="animation.js"></script>
+<script src="script.js"></script>
+</html>

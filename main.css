@@ -1,0 +1,52 @@
+#face {
+    width: 100%;
+    height: 100vh;
+    z-index: 10000;
+    display: none;
+}
+
+body {
+    background-color: white;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+main {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.a-stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-numbers {
+    font-weight: 700;
+    font-size: 2.4em;
+}
+
+.stat-text {
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-choose-us {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
