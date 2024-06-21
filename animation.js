@@ -19,20 +19,17 @@ function idleChangeCards() {
         if (i === 0) {
             card4.style.width = "max(70px, 7rem)";
             card1.style.width = "90rem";
-            i++;
         } else if (i === 1) {
             card1.style.width = "max(70px, 7rem)";
             card2.style.width = "90rem";
-            i++;
         } else if (i === 2) {
             card2.style.width = "max(70px, 7rem)";
             card3.style.width = "90rem";
-            i++;
         } else if (i == 3) {
             card3.style.width = "max(70px, 7rem)";
             card4.style.width = "90rem";
-            i++;
         }
+        i++;
         if (i > 3) i = 0;
     }, slideshowInterval);
 }
@@ -63,30 +60,43 @@ function smallIdleChangeCards() {
 
 idleChangeCards();
 
-let countUpNumbers = document.querySelectorAll(".count-up");
-
 let stat1 = document.getElementById("stat-1");
 let stat2 = document.getElementById("stat-2");
 let stat3 = document.getElementById("stat-3");
 let stat4 = document.getElementById("stat-4");
-let allStats = [stat1, stat2, stat3, stat4];
+let stats = [stat1, stat2, stat3, stat4];
+let endNumbers = [245, 24, 52, 818];
 
-let increment = 2;
 let duration = 3000;
 
-countUpNumbers.forEach((number) => {
+stats.forEach(stat => {
     let startValue = 0;
-    let endValue = parseInt(number.getAttribute("data-val"));
-
-    let interval = duration / endValue;
-    console.log(number.id);
+    let endValue = endNumbers[stat.id.split("-")[1] - 1];
+    let i = 2;
+    if (stat === stat2 || stat === stat3) {
+        i = .5;
+    } else if (stat === stat4) i = 8;
 
     let counter = setInterval(function() {
-        startValue += increment;
-        number.innerText = startValue;
+        startValue += i;
+        stat.innerText = parseInt(startValue);
         if (startValue >= endValue) {
-            number.innerText = endValue;
+            stat.innerText = endValue;
             clearInterval(counter);
         }
-    }, interval);
+    }, 1);
+    console.log(endValue);
+
+    let bounce = setInterval(function() {
+        let randomTime = Math.floor(Math.random() * 7) * 1000;
+        stat.style.animation = "bounce 1.5s ease";
+        stat.addEventListener("animationend", () => {
+            stat.style.animation = "none";
+        })
+    }, 3000);
 });
+
+let allStatContainers = document.querySelectorAll(".a-stat");
+
+allStatContainers.forEach(stat => {
+})

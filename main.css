@@ -19,7 +19,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 100px;
+    gap: min(100px, 5vw);
 }
 
 .container {
@@ -38,20 +38,24 @@ p {
     text-align: center;
 }
 
-.stats {
+.container.stats {
     display: flex;
-    justify-content: space-evenly;
     width: 100%;
+    justify-content: space-evenly;
 }
 
 .a-stat {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .stat-numbers {
     font-weight: 700;
     font-size: 2.4em;
+    position: relative;
+    transform-origin: left;
+    scale: 1;
 }
 
 .stat-text {
@@ -59,31 +63,70 @@ p {
     font-size: 1.3em;
 }
 
-.wrapper {
+.container {
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
+    padding: 20px 0;
+}
+
+.why-choose-us {
+    color: white;
+    background-color: var(--logo-bg-color);
 }
 
 .why-choose-us-text {
     width: 50%;
 }
 
+.why-choose-us-text > p {
+    border-left: 1px solid var(--logo-bg-color);
+}
+
 .why-choose-us-img {
-    aspect-ratio: 1;
-    width: min(550px, 80%); /* clamp? */
+    /* transform: scale(.8); opacity: 0; */
+    /* aspect-ratio: 1; */
+    position: relative;
+    right: 50px;
+    width: min(550px, 80%);
+    scale: 1; opacity: 0;
+    transform-origin: left;
+    min-width: 0;
     border-radius: 15px;
-    box-shadow: 5px 5px 5px rgb(160, 160, 160);
-    animation: fade-in linear forwards;
+    box-shadow: 2px 2px 10px rgb(31, 31, 31);
+    animation: fade-inla linear forwards;
     animation-timeline: view();
-    /* animation-range: ; */
+    animation-range-start: calc(min(550px, 80%) / 2);
+    animation-range-end: calc(min(550px, 80%) + 100px);
+    /* animation-range-start: contain; */
 }
 
 /* animation-timeline: view()/scroll() */
 
-@keyframes fade-in {
-    to { scale: 1; opacity: 1;}
+/* @keyframes bounce {
+    20% { bottom: 0; }
+    30% { bottom: 5px; }
+    50% { bottom: 5px; }
+    60% { bottom: 0px; }
+    80% { bottom: 0; }
+    90% { bottom: 5px; }
+    100% { bottom: 0; }
+} */
+
+@keyframes fade-inla {
+    60% { right: 0; }
+    100% { right: 0; opacity: 1; }
+}
+
+@keyframes bounce {
+    20% { scale: 1; }
+    30% { scale: 1.3; }
+    50% { scale: 1.3; }
+    60% { scale: 1; }
+    80% { scale: 1; }
+    90% { scale: 1.3; }
+    100% { scale: 1; }
 }
 
 @media screen and (max-width: 845px) {

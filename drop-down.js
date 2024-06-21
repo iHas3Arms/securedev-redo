@@ -32,10 +32,12 @@ function openMenu() {
     nav.style.opacity = "1";
     nav.style.maxHeight = "auto";
     header.style.gap = "10px";
+    dropDownBtn.style.outline = "3px solid rgb(151, 151, 151)";
 }
 
 function closeMenu() {
     nav.style.opacity = "0";
     nav.style.maxHeight = "0";
     header.style.gap = "0";
+    dropDownBtn.style.outline = "0";
 }
