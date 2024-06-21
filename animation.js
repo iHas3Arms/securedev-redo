@@ -65,39 +65,28 @@ idleChangeCards();
 
 let countUpNumbers = document.querySelectorAll(".count-up");
 
-let stat1 = document.querySelector(".stat-1");
-let stat2 = document.querySelector(".stat-2");
-let stat3 = document.querySelector(".stat-3");
-let stat4 = document.querySelector(".stat-4");
-let interval = 1;
-let increment = 3;
+let stat1 = document.getElementById("stat-1");
+let stat2 = document.getElementById("stat-2");
+let stat3 = document.getElementById("stat-3");
+let stat4 = document.getElementById("stat-4");
+let allStats = [stat1, stat2, stat3, stat4];
+
+let increment = 2;
+let duration = 3000;
 
 countUpNumbers.forEach((number) => {
     let startValue = 0;
     let endValue = parseInt(number.getAttribute("data-val"));
+
+    let interval = duration / endValue;
+    console.log(number.id);
+
     let counter = setInterval(function() {
         startValue += increment;
         number.innerText = startValue;
-        if (number === stat1) {
-            if (number.innerText >= endValue) {
-                number.innerText = endValue;
-                clearInterval(counter);
-            }
-        } else if (number === stat2) {
-            if (number.innerText >= endValue) {
-                number.innerText = endValue;
-                clearInterval(counter);
-            }
-        } else if (number === stat3) {
-            if (number.innerText >= endValue) {
-                number.innerText = endValue;
-                clearInterval(counter);
-            }
-        } else if (number === stat4) {
-            if (number.innerText >= endValue) {
-                number.innerText = endValue;
-                clearInterval(counter);
-            }
+        if (startValue >= endValue) {
+            number.innerText = endValue;
+            clearInterval(counter);
         }
     }, interval);
 });

@@ -1,0 +1,25 @@
+:root {
+    --logo-bg-color: #2B2E4D;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    gap: 50px;
+    background-color: rgb(56, 56, 56);
+    border-top: 2px solid black;
+    color: white;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 20px 5px;
+}
+
+#quick-links-ul {
+    list-style:square;
+}
+
+#quick-links-heading {
+    position: relative;
+    right: 20px;
+}
