@@ -173,12 +173,31 @@ p {
 
 .boxes {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
 }
 
 .box {
-    height: 40vh;
-    aspect-ratio: 1;
-    min-width: 40vh;
-    max-width: 50rem;
+    width: 32rem;
+}
+
+.image-container, .image-container > img, .text-container {
+    width: 32rem;
+}
+
+.text-container {
+    position: absolute;
+    background-color: blue;
+    width: 32rem;
+    aspect-ratio: 4/3;
+}
+
+.image-container > img {
+    aspect-ratio: 4/3;
+}
+
+.text-container, .text-container > p {
+    font-size: 12px;
 }
