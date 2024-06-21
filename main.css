@@ -1,5 +1,24 @@
 :root {
     --logo-bg-color: #2B2E4D;
+    --text-color: #1b1d30;
+}
+
+#scrollbar-container {
+    height: 5px;
+    width: 100vw;
+    position: fixed;
+    right: 0;
+    background-color: grey;
+    z-index: 100000000;
+}
+
+#scrollbar {
+    background-color: yellow;
+    height: 100%;
+    scale: 0 1;
+    transform-origin: left;
+    animation: zoom-in linear;
+    animation-timeline: scroll();
 }
 
 #face {
@@ -12,6 +31,7 @@
 body {
     background-color: white;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
 }
 
 main {
@@ -36,6 +56,10 @@ p {
 
 .heading {
     text-align: center;
+}
+
+.why-choose-us-text > .heading, p {
+    animation: fade-in 1s;
 }
 
 .container.stats {
@@ -71,17 +95,14 @@ p {
     padding: 20px 0;
 }
 
-.why-choose-us {
+.dark-bg {
     color: white;
     background-color: var(--logo-bg-color);
+    border-left: 5px solid var(--text-color);
 }
 
 .why-choose-us-text {
     width: 50%;
-}
-
-.why-choose-us-text > p {
-    border-left: 1px solid var(--logo-bg-color);
 }
 
 .why-choose-us-img {
@@ -95,7 +116,7 @@ p {
     min-width: 0;
     border-radius: 15px;
     box-shadow: 2px 2px 10px rgb(31, 31, 31);
-    animation: fade-inla linear forwards;
+    animation: fade-in-from-left linear forwards;
     animation-timeline: view();
     animation-range-start: calc(min(550px, 80%) / 2);
     animation-range-end: calc(min(550px, 80%) + 100px);
@@ -114,7 +135,19 @@ p {
     100% { bottom: 0; }
 } */
 
-@keyframes fade-inla {
+@keyframes fade-in {
+    to { opacity: 1; }
+}
+
+@keyframes zoom-in {
+    to { scale: 1 }
+}
+
+@keyframes fade-in-w-zoom {
+    to { scale: 1; opacity: 1; }
+}
+
+@keyframes fade-in-from-left {
     60% { right: 0; }
     100% { right: 0; opacity: 1; }
 }
@@ -136,4 +169,16 @@ p {
     .why-choose-us-text {
         width: 80%;
     }
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    height: 40vh;
+    aspect-ratio: 1;
+    min-width: 40vh;
+    max-width: 50rem;
 }

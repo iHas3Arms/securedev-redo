@@ -72,8 +72,10 @@ let duration = 3000;
 stats.forEach(stat => {
     let startValue = 0;
     let endValue = endNumbers[stat.id.split("-")[1] - 1];
-    let i = 2;
-    if (stat === stat2 || stat === stat3) {
+    let i = 3;
+    if (stat === stat2) {
+        i = .25;
+    } else if (stat === stat3) {
         i = .5;
     } else if (stat === stat4) i = 8;
 
@@ -84,7 +86,7 @@ stats.forEach(stat => {
             stat.innerText = endValue;
             clearInterval(counter);
         }
-    }, 1);
+    }, 20);
     console.log(endValue);
 
     let bounce = setInterval(function() {
