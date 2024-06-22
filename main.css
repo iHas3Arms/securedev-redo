@@ -7,7 +7,7 @@
     height: 5px;
     width: 100vw;
     position: fixed;
-    top: 0;
+    bottom: 0;
     background-color: grey;
     z-index: 100000000;
     left: 0;
@@ -32,7 +32,6 @@
 body {
     background-color: white;
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
 }
 
 main {
@@ -41,6 +40,7 @@ main {
     flex-direction: column;
     align-items: center;
     gap: min(100px, 5vw);
+    overflow-x: hidden;
 }
 
 .container {
@@ -173,33 +173,75 @@ p {
     }
 }
 
+/* Boxes from Our Services + flip animation */
+
 .boxes {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
+    max-height: max-content;
+    gap: 10px;
 }
 
 .box {
-    width: 32rem;
+    width: max(360px, 30vw);
+    border-radius: 20px;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    transition: all .5s ease;
+    cursor: pointer;
 }
 
-.image-container, .image-container > img, .text-container {
-    width: 32rem;
+.box:hover {
+    transform: rotateY(180deg);
 }
 
-.text-container {
+/* .box:not(:hover) {
+    transform: rotateY(0deg);
+} */
+
+.box > .text-container {
+    cursor: pointer;
+    border-radius: 20px;
     position: absolute;
-    background-color: blue;
-    width: 32rem;
+    background-color: salmon;
+    width: max(360px, 30vw);
     aspect-ratio: 4/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
 }
 
-.image-container > img {
-    aspect-ratio: 4/3;
+.box > #image-1 {
+    background-image: url("./img/service/service1.jpg");
 }
 
-.text-container, .text-container > p {
-    font-size: 12px;
+.box > #image-2 {
+    background-image: url("./img/service/service2.jpg");
+}
+
+.box > #image-3 {
+    background-image: url("./img/service/service3.jpg");
+}
+
+.box > .image {
+    cursor: pointer;
+    /* position: absolute; */
+    width: max(360px, 30vw);
+    aspect-ratio: 4/3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    backface-visibility: hidden;
+}
+
+.box p {
+    font-size: clamp(.8rem, 1.1vw, 1.25rem);
+    font-weight: 600;
 }

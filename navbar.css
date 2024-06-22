@@ -169,12 +169,10 @@ li > a:not(:hover) {
         transition: .3s;
         opacity: 0;
         max-height: 0;
-    }
-    #links {
-        width: 100%;
         flex-direction: column;
         gap: 20px;
         background-color: var(--logo-bg-color);
+        display: none;
     }
     #links > li {
         padding: 20px 50px;

@@ -39,6 +39,7 @@ function changeStateOfDropDown() {
 }
 
 function openMenu() {
+    nav.style.display = "flex";
     nav.style.opacity = "1";
     nav.style.maxHeight = "10000px";
     header.style.gap = "10px";
@@ -50,4 +51,7 @@ function closeMenu() {
     nav.style.maxHeight = "0";
     header.style.gap = "0";
     dropDownBtn.style.outline = "0";
+    setTimeout(() => {
+        nav.style.display = "none";
+    }, 300);
 }

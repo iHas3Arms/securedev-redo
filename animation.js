@@ -101,4 +101,4 @@ stats.forEach(stat => {
 let allStatContainers = document.querySelectorAll(".a-stat");
 
 allStatContainers.forEach(stat => {
-})
+});
