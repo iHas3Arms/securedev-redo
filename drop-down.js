@@ -1,7 +1,15 @@
 let dropDownBtn = document.getElementById("drop-down-btn");
-let nav = document.querySelector("nav");
+let nav = document.getElementById("links");
 let links = document.getElementById("links");
 let header = document.querySelector("header");
+
+let headerReplacement = document.querySelector(".header-replacement");
+
+let headerHeight = header.offsetHeight;
+
+console.log(headerHeight);
+
+headerReplacement.style.height = headerHeight + "px";
 
 let menuOpen = false;
 
@@ -12,6 +20,8 @@ contactHyperLink.innerText = "Contact";
 let contactListItem = document.createElement("li");
 contactListItem.className = "contact-list-item";
 contactListItem.append(contactHyperLink);
+
+
 
 function changeStateOfDropDown() {
     if (!contactListItemAdded) {
@@ -30,7 +40,7 @@ function changeStateOfDropDown() {
 
 function openMenu() {
     nav.style.opacity = "1";
-    nav.style.maxHeight = "auto";
+    nav.style.maxHeight = "10000px";
     header.style.gap = "10px";
     dropDownBtn.style.outline = "3px solid rgb(151, 151, 151)";
 }

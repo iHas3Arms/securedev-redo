@@ -7,9 +7,10 @@
     height: 5px;
     width: 100vw;
     position: fixed;
-    right: 0;
+    top: 0;
     background-color: grey;
     z-index: 100000000;
+    left: 0;
 }
 
 #scrollbar {
@@ -66,6 +67,7 @@ p {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
+    z-index: 1;
 }
 
 .a-stat {
@@ -118,7 +120,7 @@ p {
     box-shadow: 2px 2px 10px rgb(31, 31, 31);
     animation: fade-in-from-left linear forwards;
     animation-timeline: view();
-    animation-range-start: calc(min(550px, 80%) / 2);
+    animation-range-start: calc(min(550px, 80%) 10);
     animation-range-end: calc(min(550px, 80%) + 100px);
     /* animation-range-start: contain; */
 }

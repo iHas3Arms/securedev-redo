@@ -22,6 +22,8 @@ body {
 }
 
 header {
+    z-index: 999999999999;
+    width: 100%;
     background-color: var(--logo-bg-color);
     display: flex;
     align-items: center;
@@ -29,7 +31,7 @@ header {
     /* padding: 10px; */
     color: white;
     gap: 50px;
-    position: sticky;
+    position: fixed;
 }
 
 .important {
@@ -113,6 +115,7 @@ li > a:not(:hover) {
     border-radius: 5px;
     cursor: pointer;
     transition: .1s;
+    z-index: 99999999999;
 }
 
 .line {
@@ -160,12 +163,12 @@ li > a:not(:hover) {
         width: 100vw;
         padding: 5px 30px;
     }
-    nav {
-        z-index: 10000;
+    #links {
+        z-index: 999999;
         width: 100%;
+        transition: .3s;
         opacity: 0;
         max-height: 0;
-        transition: .3s;
     }
     #links {
         width: 100%;
@@ -176,6 +179,7 @@ li > a:not(:hover) {
     #links > li {
         padding: 20px 50px;
         transition: .3s;
+        font-weight: 500;
     }
     #links > li > a:hover {
         padding: 30px 30px;
@@ -198,6 +202,7 @@ li > a:not(:hover) {
         font-weight: 600;
     }
     #links > .contact-list-item > a:hover {
+        padding: 10px 30px;
         color: white;
         cursor: pointer;
         transition: .2s;
