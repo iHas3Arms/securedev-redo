@@ -21,6 +21,15 @@ footer {
 
 #quick-links-ul {
     list-style:square;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#quick-links-ul > li > a:hover {
+    padding: 0;
+    background-color: rgb(56, 56, 56);
+    color: white;
 }
 
 #quick-links-heading {
