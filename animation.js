@@ -1,3 +1,5 @@
+// Cards animation
+
 let cardContainer = document.querySelector(".card-container");
 let card1 = document.getElementById("card-1");
 let card2 = document.getElementById("card-2");
@@ -60,6 +62,8 @@ function smallIdleChangeCards() {
 
 idleChangeCards();
 
+// Stats
+
 let stat1 = document.getElementById("stat-1");
 let stat2 = document.getElementById("stat-2");
 let stat3 = document.getElementById("stat-3");
@@ -98,7 +102,22 @@ stats.forEach(stat => {
     }, 3000);
 });
 
-let allStatContainers = document.querySelectorAll(".a-stat");
+// Our Services flip animation
 
-allStatContainers.forEach(stat => {
+let boxes = document.querySelectorAll(".box");
+
+let textContainers = document.querySelectorAll(".text-container");
+
+let flipped = false;
+
+boxes.forEach(box => {
+    box.addEventListener("click", () => {
+        if (!flipped) {
+            flipped = true;
+            box.style.transform = "rotateY(180deg)";
+        } else {
+            flipped = false;
+            box.style.transform = "rotateY(0deg)";
+        }
+    });
 });

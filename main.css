@@ -53,6 +53,7 @@ main {
 
 p {
     font-size: clamp(1rem, 1.25vw, 1.25rem);
+    text-align: center;
 }
 
 .heading {
@@ -192,17 +193,22 @@ p {
     transform-style: preserve-3d;
     transition: all .5s ease;
     cursor: pointer;
+    box-shadow: 5px 5px 5px rgb(31, 31, 31);
 }
 
-.box:hover {
+
+/* This is a SICK effect, but don't use it
+
+.box:active {
     transform: rotateY(180deg);
-}
+} */
 
 /* .box:not(:hover) {
     transform: rotateY(0deg);
 } */
 
 .box > .text-container {
+    border: 2px solid var(--logo-bg-color);
     cursor: pointer;
     border-radius: 20px;
     position: absolute;
@@ -231,6 +237,7 @@ p {
 }
 
 .box > .image {
+    border: 2px solid var(--logo-bg-color);
     cursor: pointer;
     /* position: absolute; */
     width: max(360px, 30vw);
