@@ -40,7 +40,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: min(100px, 5vw);
+    gap: min(100px, 10vw);
     overflow-x: hidden;
 }
 
@@ -126,7 +126,7 @@ p {
     animation-range-end: 120px; */
 }
 
-@keyframes fade {
+@keyframes fade-in {
     to { opacity: 1; }
 }
 
@@ -163,6 +163,9 @@ p {
     }
     .text {
         width: 80%;
+    }
+    .our-projects > .boxes {
+        width: 100%;
     }
 }
 
@@ -272,4 +275,93 @@ p {
 
 .about-us > .text > p, .about-us > .text > .heading {
     text-align: left;
+}
+
+.our-projects > .boxes {
+    width: 80%;
+    gap: 50px;
+}
+
+.our-projects > .boxes > .box-container {
+    width: max(360px, 22.5vw);
+}
+
+.our-projects > .boxes > .box-container > .box {
+    width: max(360px, 22.5vw);
+    max-width: 600px;
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border : 2px solid var(--logo-bg-color);
+}
+
+#project-1 { background-image: url("./img/projects/project1.jpg"); }
+#project-2 { background-image: url("./img/projects/project2.jpg"); }
+#project-3 { background-image: url("./img/projects/project3.jpg"); }
+#project-4 { background-image: url("./img/projects/project4.jpg"); }
+#project-5 { background-image: url("./img/projects/project5.jpg"); }
+#project-6 { background-image: url("./img/projects/project6.jpg"); }
+
+.mini-separator {
+    width: calc(max(360px, 22.5vw) / 2);
+    height: 1px;
+    background-color: var(--logo-bg-color);
+    border: 0;
+    outline: 0;
+}
+
+.exec-team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.team-boxes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.team-box {
+    width: max(360px, 20vw);
+}
+
+#team-img-1 { background-image: url("./img/team/team-1.jpg"); }
+#team-img-2 { background-image: url("./img/team/team-2.jpg"); }
+#team-img-3 { background-image: url("./img/team/team-3.jpg"); }
+#team-img-4 { background-image: url("./img/team/team-4.jpg"); }
+
+.team-img, .team-text {
+    width: 100%;
+}
+
+.team-img {
+    border-top-right-radius: 30px;
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.team-text {
+    padding: 10px 20px;
+    background-color: rgb(252, 252, 252);
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.team-text > p {
+    font-size: 1.4rem;
+    text-align: left;
+}
+
+.separator {
+    width: 80%;
+    height: 1px;
+    background-color: var(--logo-bg-color);
+    border: 0;
 }

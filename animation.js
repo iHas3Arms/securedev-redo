@@ -104,7 +104,8 @@ stats.forEach(stat => {
 
 // Our Services flip animation
 
-let boxes = document.querySelectorAll(".box");
+let ourServices = document.querySelector(".our-services");
+let boxes = ourServices.querySelectorAll(".box");
 
 let flipped = false;
 
