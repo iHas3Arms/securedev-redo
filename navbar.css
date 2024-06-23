@@ -2,6 +2,8 @@
 
 :root {
     --logo-bg-color: #2B2E4D;
+    --text-color: #1b1d30;
+    --subheading-color: rgb(244, 76, 58);
 }
 
 * {
@@ -32,6 +34,7 @@ header {
     color: white;
     gap: 50px;
     position: fixed;
+    border-bottom: 2px solid var(--text-color);
 }
 
 .important {
@@ -206,8 +209,4 @@ li > a:not(:hover) {
         transition: .2s;
         text-shadow: 2px 2px 5px black;
     }
-}
-
-.subheading {
-    color: rgb(244, 76, 58);
 }

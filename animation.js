@@ -95,18 +95,16 @@ stats.forEach(stat => {
 
     let bounce = setInterval(function() {
         let randomTime = Math.floor(Math.random() * 7) * 1000;
-        stat.style.animation = "bounce 1.5s ease";
+        stat.style.animation = "bounce 1s ease";
         stat.addEventListener("animationend", () => {
             stat.style.animation = "none";
-        })
-    }, 3000);
+        });
+    }, 5000);
 });
 
 // Our Services flip animation
 
 let boxes = document.querySelectorAll(".box");
-
-let textContainers = document.querySelectorAll(".text-container");
 
 let flipped = false;
 

@@ -61,19 +61,31 @@
 
         <div class="container stats">
             <div class="a-stat">
-                <span class="stat-numbers count-up" id="stat-1" data-val="245">0</span>
+                <div class="stat-container">
+                    <img class="stat-img" id="stat-1-img" src="img/stats/stat-1-img.svg" alt="people">
+                    <span class="stat-numbers count-up" id="stat-1" data-val="245">0</span>
+                </div>
                 <span class="stat-text years-experience">Years Experience</span>
             </div>
             <div class="a-stat">
-                <span class="stat-numbers count-up" id="stat-2" data-val="24">0</span>
+                <div class="stat-container">
+                    <img class="stat-img" id="stat-2-img" src="img/stats/stat-2-img.svg" alt="checkmark">
+                    <span class="stat-numbers count-up" id="stat-2" data-val="24">0</span>
+                </div>
                 <span class="stat-text team-members">Team Members</span>
             </div>
             <div class="a-stat">
-                <span class="stat-numbers count-up" id="stat-3" data-val="52">0</span>
+                <div class="stat-container">
+                    <img class="stat-img" id="stat-3-img" src="img/stats/stat-3-img.svg" alt="certifications">
+                    <span class="stat-numbers count-up" id="stat-3" data-val="52">0</span>
+                </div>
                 <span class="stat-text certifications">Certifications</span>
             </div>
             <div class="a-stat">
-                <span class="stat-numbers count-up" id="stat-4" data-val="818">0</span>
+                <div class="stat-container">
+                    <img class="stat-img" id="stat-4-img" src="img/stats/stat-4-img.svg" alt="cog">
+                    <span class="stat-numbers count-up" id="stat-4" data-val="818">0</span>
+                </div>
                 <span class="stat-text projects-done">Projects Done</span>
             </div>
         </div>
@@ -81,11 +93,11 @@
         <!-- WHY CHOOSE US -->
 
         <div class="container dark-bg why-choose-us">
-            <div class="why-choose-us-text">
+            <div class="text why-choose-us-text">
                 <div class="heading">
-                    <h2 class="subheading">Why Choose Us?</h2>
+                    <h2 class="subheading">Why Choose Us!</h2>
                     <h2 class="big-subheading">Why People Trust Us? Learn About Us!</h2>
-                </div>
+                </div><br>
                 <p>Our software solutions make your operations simpler, adaptable, scalable, intuitive, and easy to maintain, by using Smart DevOps-driven application development.
                     <br><br>
                     Building secure & cost efficient cloud platforms, we enable businesses in managing containerisation, orchestrate infrastructure, provide self-healing and auto-scaling.
@@ -97,7 +109,7 @@
                     Digital products that are focussed on user needs, scalable and solutions-oriented, and business owners who are able to easily pivot based on feedback.
                 </p>
             </div>
-            <img class="why-choose-us-img" src="img/home/choose.jpg" alt="People gathered at a table analysing data">
+            <img class="img" src="img/home/choose.jpg" alt="People gathered at a table analysing data">
         </div>
 
         <!-- OUR SERVICES -->
@@ -106,46 +118,77 @@
             <div class="heading">
                 <h2 class="subheading">Our Services</h2>
                 <h2 class="big-subheading">Our service portfolio covers an entire software development life cycle and meets varied business needs.</h2>
-                <p>Click the boxes to find out more information.</p>
+                <br><p>Click the boxes to find out more information.</p><br>
             </div>
             <div class="boxes">
-                <div class ="box" id="web-design-box">
-                    <div class="text-container">
-                        <h2>Web Design</h2>
-                        <p>We design and build highly effective websites for businesses across all sectors
-                            <br><br>
-                            Our experienced in-house team provides a range of creative and technical services that result in stunning new websites for our clients, helping them boost their Digital Marketing results.
-                            <br><br>
-                            We can help with a range of websites from complex e.commerce to all sized business sites. The expertise, knowledge, and talent of our internal design team can revitalise your web presence and convey your value proposition in a clear, clean, and compelling way.
-                        </p>
+                <div class="box-container">
+                    <h2>Web Design</h2>
+                    <div class ="box" id="web-design-box">
+                        <div class="text-container">
+                            <p>We design and build highly effective websites for businesses across all sectors
+                                <br><br>
+                                Our experienced in-house team provides a range of creative and technical services that result in stunning new websites for our clients, helping them boost their Digital Marketing results.
+                                <br><br>
+                                We can help with a range of websites from complex e.commerce to all sized business sites. The expertise, knowledge, and talent of our internal design team can revitalise your web presence and convey your value proposition in a clear, clean, and compelling way.
+                            </p>
+                        </div>
+                        <div class="image" id="image-1"></div>
                     </div>
-                    <div class="image" id="image-1"></div>
                 </div>
-                <div class="box" id="app-dev-box">
-                    <div class="text-container">
-                        <h2>App Development</h2>
-                        <p>Our software solutions make your operations simpler, adaptable, scalable, intuitive, and easy to maintain.
-                        <br><br>
-                        Drawing on years of a development pool of resources with over 35 years of experience, across a full range of programming languages, our success stories speak for themselves. Going beyong the art of the possible, our approach to innovation shapes industry process and standards through out technology solutons.
-                        <br><br>
-                        With our agile approach we move fast and do whats right for you, delivering a nimble, tailored and personal service.</p>
+                <div class="box-container">
+                    <h2>App Development</h2>
+                    <div class="box" id="app-dev-box">
+                        <div class="text-container">
+                            <p>Our software solutions make your operations simpler, adaptable, scalable, intuitive, and easy to maintain.
+                            <br><br>
+                            Drawing on years of a development pool of resources with over 35 years of experience, across a full range of programming languages, our success stories speak for themselves. Going beyong the art of the possible, our approach to innovation shapes industry process and standards through out technology solutons.
+                            <br><br>
+                            With our agile approach we move fast and do whats right for you, delivering a nimble, tailored and personal service.</p>
+                        </div>
+                        <div class="image" id="image-2"></div>
                     </div>
-                    <div class="image" id="image-2"></div>
                 </div>
-                <div class="box" id="cloud-box">
-                    <div class="text-container">
-                        <h2>Cloud & Infrastructure</h2>
-                        <p>Our cloud platforms and cloud hosting solutions make digital transformation accessible and affordable for all. Our Devops team will help you use cloud solutions to transform your organisation and achieve your goals.
-                            <br><br>
-                            Be it streamlining operations, redesigning business process, or maximising your IT budget to gain a competitive edge, we have a range of cloud solutions to meet all organisation needs and objectives.
-                            <br><br>
-                            From building your cloud environment from scratch, day to day support and optimisation of your existing solutions, we have years of experience that can help you get the most out of your environment.
-                        </p>
+                <div class="box-container">
+                    <h2>Cloud & Infrastructure</h2>
+                    <div class="box" id="cloud-box">
+                        <div class="text-container">
+                            <p>Our cloud platforms and cloud hosting solutions make digital transformation accessible and affordable for all. Our Devops team will help you use cloud solutions to transform your organisation and achieve your goals.
+                                <br><br>
+                                Be it streamlining operations, redesigning business process, or maximising your IT budget to gain a competitive edge, we have a range of cloud solutions to meet all organisation needs and objectives.
+                                <br><br>
+                                From building your cloud environment from scratch, day to day support and optimisation of your existing solutions, we have years of experience that can help you get the most out of your environment.
+                            </p>
+                        </div>
+                        <div class="image" id="image-3"></div>
                     </div>
-                    <div class="image" id="image-3"></div>
                 </div>
             </div>
         </div>
+
+        <!-- ABOUT US -->
+
+        <div class="container about-us">
+            <img class="img" src="img/home/about.jpg"></img>
+            <div class="text">
+                <div class="heading">
+                    <h2 class="subheading">About Us</h2>
+                    <h2 class="big-subheading">Digital Solution With 10 Years Of Experience</h2>
+                </div><br>
+                <p>SecureDev professionals collectively have many years of experience in the technology industry. From graphic design, to content management, to mobile apps, to private and public cloud hosting services, custom programming and much more, we can help you create a bespoke solution that will transform your business technical needs, and help you run your business more effectively.
+                    <br><br>
+                    By working with your business needs, we can ensure that the solutions is tailored to ensure that you are getting real value for money across all services.
+                    <br><br>
+                    To discuss your service and solution needs, dont hesitate and get in touch ASAP!
+                </p>
+            </div>
+        </div>
+
+        <!-- OUR PROJECTS -->
+
+        <div class="container our-projects">
+            
+        </div>
+
     </main>
 
     <!-- FOOTER -->
@@ -175,10 +218,10 @@
             <ul id="quick-links-ul">
                 <li>Home</li>
                 <li>About Us</li>
-                <li>Project</li>
-                <li>Contact</li>
-                <li>Our Team</li>
                 <li>Services</li>
+                <li>Project</li>
+                <li>Our Team</li>
+                <li>Contact</li>
             </ul>
         </div>
     </footer>

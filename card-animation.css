@@ -45,6 +45,6 @@
         opacity: 0;
     }
     to {
-        visibility: 1;
+        opacity: 1;
     }
 }
