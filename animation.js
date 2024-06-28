@@ -104,19 +104,37 @@ stats.forEach(stat => {
 
 // Our Services flip animation
 
-let ourServices = document.querySelector(".our-services");
-let boxes = ourServices.querySelectorAll(".box");
+// let ourServices = document.querySelector(".our-services");
+// let boxes = ourServices.querySelectorAll(".box");
 
-let flipped = false;
+// let flipped = false;
 
-boxes.forEach(box => {
-    box.addEventListener("click", () => {
-        if (!flipped) {
-            flipped = true;
-            box.style.transform = "rotateY(180deg)";
+// boxes.forEach(box => {
+//     box.addEventListener("click", () => {
+//         if (!flipped) {
+//             flipped = true;
+//             box.style.transform = "rotateY(180deg)";
+//         } else {
+//             flipped = false;
+//             box.style.transform = "rotateY(0deg)";
+//         }
+//     });
+// });
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        let alreadyAnimated = false;
+        console.log(entry);
+        if (alreadyAnimated) return;
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            entry.target.classList.remove("hidden");
+            alreadyAnimated = true;
         } else {
-            flipped = false;
-            box.style.transform = "rotateY(0deg)";
+            entry.target.classList.remove("show");
         }
     });
 });
+
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));
