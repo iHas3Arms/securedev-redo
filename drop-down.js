@@ -3,30 +3,20 @@ let nav = document.getElementById("links");
 let links = document.getElementById("links");
 let header = document.querySelector("header");
 
-let headerReplacement = document.querySelector(".header-replacement");
-
-let headerHeight = header.offsetHeight;
-
-console.log(headerHeight);
-
-headerReplacement.style.height = headerHeight + "px";
-
 let menuOpen = false;
 
-let contactListItemAdded = false;
+let contactBtnInList = false;
 
 let contactHyperLink = document.createElement("a");
-contactHyperLink.innerText = "Contact";
+contactHyperLink.innerText = "CONTACT";
 let contactListItem = document.createElement("li");
 contactListItem.className = "contact-list-item";
 contactListItem.append(contactHyperLink);
 
-
-
 function changeStateOfDropDown() {
-    if (!contactListItemAdded) {
+    if (!contactBtnInList) {
         links.append(contactListItem);
-        contactListItemAdded = true;
+        contactBtnInList = true;
     }
 
     if (!menuOpen) {
@@ -39,6 +29,7 @@ function changeStateOfDropDown() {
 }
 
 function openMenu() {
+    nav.style.top = header.offsetHeight + "px";
     nav.style.display = "flex";
     nav.style.opacity = "1";
     nav.style.maxHeight = "10000px";

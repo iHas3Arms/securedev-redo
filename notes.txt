@@ -1,0 +1,14 @@
+ADD BTN TO SCROLL TO TOP - ✅
+!!! ALSO A SIDEWAYS SCROLL ANIMATION WITH PICTURES
+
+# Uncaught ReferenceError: can't access lexical declaration 'contactBtnInList' before initialization
+#     changeStateOfDropDown http://127.0.0.1:5500/drop-down.js:20
+#     onclick http://127.0.0.1:5500/:1
+# 
+# error when clicking drop down menu btn 😭 - sorted now 👍- ✅
+
+Make bg of header white on scroll - ✅
+
+# links only work from top of page, whyyyy
+# It's cos it gets the y value from where it is on the page, so do smth with that
+# Fixed it - ✅

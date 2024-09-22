@@ -16,10 +16,17 @@
     </div>
 
     <img id="face" src="img/james.jpg" alt="Just my face" style="display:none;">
+
+    <button class="scroll-to-top" onclick="scrollToTop()">
+        <div class="arrow-line"></div>
+        <div class="arrow-line"></div>
+    </button>
     <header>
         <div class="important">
-            <div class="logo-container">
-                <a id="logo-link" href="index.html"><img id="logo" src="img/logos/SecureDev_Logo.png" alt="SecureDev Ltd."></a>
+            <div id="logo-container" class="logo-container">
+                <a id="logo-link" href="index.html">
+                    <div id="logo" alt="SecureDev Ltd."></div>
+                </a>
             </div>
             <button id="drop-down-btn" onclick="changeStateOfDropDown()">
                 <div class="line"></div>
@@ -28,11 +35,11 @@
             </button>
         </div>
         <ul id="links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="index.html#about-us">About</a></li>
-            <li><a href="index.html#our-services">Services</a></li>
-            <li><a href="index.html#our-projects">Project</a></li>
-            <li><a href="index.html#exec-team">Our Team</a></li>
+            <li><a id="home-link">HOME</a></li>
+            <li><a id="about-link">ABOUT</a></li>
+            <li><a id="services-link">SERVICES</a></li>
+            <li><a id="project-link">PROJECT</a></li>
+            <li><a id="team-link">OUR TEAM</a></li>
         </ul>
         <!-- <ul class="contacts">
             <li>Facebook: SecureDev LTD</li>
@@ -49,7 +56,7 @@
 
         <!-- CARD ANIMATION -->
         
-        <div class="card-container">
+        <div id="card-container" class="card-container">
             <div class="card" id="card-1"></div>
             <div class="card" id="card-2"></div>
             <div class="card" id="card-3"></div>
@@ -201,7 +208,7 @@
                 <div class="box-container hidden">
                     <h2>Customer Mobile App</h2>
                     <p>1st class UX experience, feature rich</p>
-                    <hr class="separator">
+                    <hr class="mini-separator">
                     <div class="box" id="project-1"></div>
                 </div>
                 <div class="box-container hidden">
@@ -225,7 +232,7 @@
                 <div class="box-container hidden">
                     <h2>Service Delivery Function</h2>
                     <p>ITIL Service desk with 90% FTFR</p>
-                    <hr class="separator">
+                    <hr class="mini-separator">
                     <div class="box" id="project-5"></div>
                 </div>
                 <div class="box-container hidden">
@@ -277,7 +284,6 @@
                 </div>
             </div>
         </div>
-
     </main>
 
     <!-- FOOTER -->
@@ -315,7 +321,7 @@
         </div>
     </footer>
 </body>
-<script src="drop-down.js"></script>
+<script src="drop-down.js" fe></script>
 <script src="animation.js"></script>
 <script src="script.js"></script>
 </html>

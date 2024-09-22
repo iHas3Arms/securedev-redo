@@ -11,6 +11,8 @@ let slideshowInterval = 4000;
 
 if (window.innerWidth < 845) isSmall = true;
 
+// CARD CYCLE ANIMATIONS
+
 function idleChangeCards() {
     if (isSmall) {
         smallIdleChangeCards();
@@ -62,7 +64,7 @@ function smallIdleChangeCards() {
 
 idleChangeCards();
 
-// Stats
+// STATS ANIMATIONS
 
 let stat1 = document.getElementById("stat-1");
 let stat2 = document.getElementById("stat-2");
@@ -92,9 +94,8 @@ stats.forEach(stat => {
         }
     }, 20);
     console.log(endValue);
-
+    
     let bounce = setInterval(function() {
-        let randomTime = Math.floor(Math.random() * 7) * 1000;
         stat.style.animation = "bounce 1s ease";
         stat.addEventListener("animationend", () => {
             stat.style.animation = "none";
@@ -121,10 +122,11 @@ stats.forEach(stat => {
 //     });
 // });
 
+// FADE IN ANIMATIONS
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         let alreadyAnimated = false;
-        console.log(entry);
         if (alreadyAnimated) return;
         if (entry.isIntersecting) {
             entry.target.classList.add("show");
@@ -138,3 +140,19 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
+
+// SCROLLBAR ANIMATION
+
+let body = document.body;
+let html = document.documentElement;
+let scrollbar = document.getElementById("scrollbar");
+
+let pageHeight = Math.max( body.scrollHeight, body.offsetHeight,
+                           html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+let scrollPageHeight = pageHeight - window.innerHeight;
+
+document.addEventListener("scroll", function() {
+    let percentScrolledDown = window.scrollY / scrollPageHeight;
+    scrollbar.style.scale = percentScrolledDown + " 1";
+});
