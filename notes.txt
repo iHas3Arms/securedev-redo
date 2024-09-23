@@ -12,3 +12,6 @@ Make bg of header white on scroll - ✅
 # links only work from top of page, whyyyy
 # It's cos it gets the y value from where it is on the page, so do smth with that
 # Fixed it - ✅
+
+Contact Page:
+Make form and follow variables in contact.js

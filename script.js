@@ -13,15 +13,11 @@ document.addEventListener("scroll", function() {
     if (window.scrollY > 0) {
         
         header.classList.add("scrolled");
-        headerLogo.style.width = "7vh";
-        headerLogoLink.style.width = "7vh";
-        headerLogo.style.borderRadius = "50%";
+        // headerLogo.style.width = "7vh";
+        // headerLogoLink.style.width = "7vh";
+        // headerLogo.style.borderRadius = "50%";
     } else {
         header.classList.remove("scrolled");
-        headerLogo.style.width = "21vh";
-        headerLogo.style.borderRadius = "0";
-        headerLogoLink.style.width = "21vh";
-        links.style.color = "white";
     }
     
     if (window.scrollY > window.innerHeight) {
@@ -51,7 +47,7 @@ let allHeaderLinks = [homeLink, aboutLink, servicesLink, projectLink, teamLink];
 allHeaderLinks.forEach(function(link) {
     link.addEventListener("click", function() {
         if (link == homeLink) {
-            window.scrollToTop();
+            scrollToTop();
         } else if (link == aboutLink) {
             console.log(aboutSection.getBoundingClientRect().y - header.offsetHeight);
             window.scrollTo(0, window.scrollY + aboutSection.getBoundingClientRect().y - header.offsetHeight);

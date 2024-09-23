@@ -21,6 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: max-content;
 }
 
 header {
@@ -60,24 +61,33 @@ header.scrolled > #logo-container > #logo-link > #logo {
     transition: all .4s ease-in-out;
 }
 
-/* .important {
-    margin: 10px 3%;
-} */
+header > .important > .logo-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 5%;
+}
 
 #logo-link {
+    height: 100%;
     display: flex;
     align-items: center;
-    width: 21vh;
+    justify-content: center;
     transition: all .4s ease;
 }
 
 #logo {
     background-image: url("./img/SecureDev_Logo.png");
-    height: 7vh;
-    width: 21vh;
+    width: fit-content;
+    height: 100%;
     background-size: 1;
     background-repeat: no-repeat;
     transition: all .2s ease-in;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
 }
 
 header #logo:hover {
@@ -137,7 +147,7 @@ li > a:not(:hover) {
     width: 50px;
     padding: 10px;
     position: absolute;
-    right: 1.5%;
+    right: 5%;
     display: none;
     justify-content: space-between;
     align-items: center;
@@ -146,8 +156,12 @@ li > a:not(:hover) {
     border: 0;
     border-radius: 10px;
     cursor: pointer;
-    transition: .1s;
+    transition: all .2s ease-in-out;
     z-index: 99999999999;
+}
+
+header.scrolled #drop-down-btn {
+    background-color: white;
 }
 
 .line {
@@ -155,6 +169,11 @@ li > a:not(:hover) {
     height: 2px;
     background-color: white;
     border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+
+header.scrolled .line {
+    background-color: var(--logo-bg-color);
 }
 
 #contact-btn {
@@ -164,10 +183,10 @@ li > a:not(:hover) {
     background-color: salmon;
     font-size: 1em;
     font-family: "Poppins", sans-serif;
-    position: absolute;
-    right: 3%;
+    position: absolute; 
+    right: 5%;
     padding: 10px 20px;
-    margin: 0 20px;
+    margin: 0;
     cursor: pointer;
     font-weight: 600;
     transition: .1s ease-in;
@@ -193,11 +212,6 @@ li > a:not(:hover) {
         gap: 0;
         transition: .3s;
     }
-    .logo-container {
-        /* padding: 0 30px; */
-        position: relative;
-        margin: 5px 20px;
-    }
     #links {
         position: fixed;
         left: 0;
@@ -218,7 +232,7 @@ li > a:not(:hover) {
         font-weight: 500;
     }
     #links > li > a:hover {
-        padding: 30px 30px;
+        padding: 20px 30px;
     }
     #links:last-child {
         padding: 0 0 30px 0;
@@ -228,7 +242,6 @@ li > a:not(:hover) {
     }
     #drop-down-btn {
         display: flex;
-        margin: 5px 30px;
     }
     #links > .contact-list-item > a {
         background-color: salmon;

@@ -227,6 +227,16 @@ p {
     font-size: clamp(1rem, .8vw, 27px);
 }
 
+#our-services-boxes > .box-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#our-services-boxes > .box-container > .box:hover { scale: 1.01; }
+
 #our-services-boxes > .box-container:nth-child(1) { transition-delay: 200ms; }
 #our-services-boxes > .box-container:nth-child(2) { transition-delay: 400ms; }
 #our-services-boxes > .box-container:nth-child(3) { transition-delay: 600ms; }
@@ -262,6 +272,8 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+#our-projects > .boxes > .box-container > .box:hover { scale: 0.98; }
 
 #project-1 { background-image: url("./img/projects/project1.jpg"); }
 #project-2 { background-image: url("./img/projects/project2.jpg"); }
