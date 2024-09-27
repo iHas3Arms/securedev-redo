@@ -121,38 +121,3 @@ stats.forEach(stat => {
 //         }
 //     });
 // });
-
-// FADE IN ANIMATIONS
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        let alreadyAnimated = false;
-        if (alreadyAnimated) return;
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-            entry.target.classList.remove("hidden");
-            alreadyAnimated = true;
-        } else {
-            entry.target.classList.remove("show");
-        }
-    });
-});
-
-const hiddenElements = document.querySelectorAll(".hidden");
-hiddenElements.forEach((el) => observer.observe(el));
-
-// SCROLLBAR ANIMATION
-
-let body = document.body;
-let html = document.documentElement;
-let scrollbar = document.getElementById("scrollbar");
-
-let pageHeight = Math.max( body.scrollHeight, body.offsetHeight,
-                           html.clientHeight, html.scrollHeight, html.offsetHeight );
-
-let scrollPageHeight = pageHeight - window.innerHeight;
-
-document.addEventListener("scroll", function() {
-    let percentScrolledDown = window.scrollY / scrollPageHeight;
-    scrollbar.style.scale = percentScrolledDown + " 1";
-});

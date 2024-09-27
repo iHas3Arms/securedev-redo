@@ -1,36 +1,3 @@
-// let face = document.querySelector("#face");
-
-// setTimeout(function() {
-//     face.style.display = "block";
-// }, Math.floor((Math.random() * 20) + 10) * 1000);
-
-let scrollToTopBtn = document.querySelector(".scroll-to-top");
-let headerLogo = document.getElementById("logo");
-let headerLogoLink = document.getElementById("logo-link");
-let listItems = links.querySelectorAll("li");
-
-document.addEventListener("scroll", function() {
-    if (window.scrollY > 0) {
-        
-        header.classList.add("scrolled");
-        // headerLogo.style.width = "7vh";
-        // headerLogoLink.style.width = "7vh";
-        // headerLogo.style.borderRadius = "50%";
-    } else {
-        header.classList.remove("scrolled");
-    }
-    
-    if (window.scrollY > window.innerHeight) {
-        scrollToTopBtn.style.opacity = 1;
-    } else {
-        scrollToTopBtn.style.opacity = 0;
-    }
-});
-
-function scrollToTop() {
-    window.scrollTo(0, 0);
-}
-
 let homeSection = document.getElementById("card-container");
 let aboutSection = document.getElementById("about-us");
 let servicesSection = document.getElementById("our-services");
@@ -43,6 +10,10 @@ let servicesLink = document.getElementById("services-link");
 let projectLink = document.getElementById("project-link");
 let teamLink = document.getElementById("team-link");
 let allHeaderLinks = [homeLink, aboutLink, servicesLink, projectLink, teamLink];
+
+function scrollToTop() {
+    window.scrollTo(0, 0);
+}
 
 allHeaderLinks.forEach(function(link) {
     link.addEventListener("click", function() {

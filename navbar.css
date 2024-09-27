@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+html {
+    transition: scroll .5s ease-out;
+    scroll-behavior: smooth;
+}
+
 :root {
     --logo-bg-color: #2B2E4D;
     --text-color: #1b1d30;
@@ -10,11 +15,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-body {
-    background-color: rgb(170, 170, 170);
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .important {
@@ -36,13 +36,13 @@ header {
     gap: 50px;
     top: 0;
     position: sticky;
-    padding: 5px 3vw;
+    padding: 10px 3vw;
     transition: background-color 0.2s ease-in-out;
-    box-shadow: 0 5px 20px black;
 }
 
 header.scrolled {
     background-color: white;
+    box-shadow: 0 5px 20px black;
 }
 
 header.scrolled > #links > li > a {
@@ -51,14 +51,6 @@ header.scrolled > #links > li > a {
 
 header.scrolled > #links > li > a:hover {
     color: white;
-}
-
-header.scrolled > #logo-container > #logo-link {
-    transition: all .4s ease-out;
-}
-
-header.scrolled > #logo-container > #logo-link > #logo {
-    transition: all .4s ease-in-out;
 }
 
 header > .important > .logo-container {
@@ -75,7 +67,7 @@ header > .important > .logo-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all .4s ease;
+    transition: all .4s ease-out;
 }
 
 #logo {
@@ -84,8 +76,8 @@ header > .important > .logo-container {
     height: 100%;
     background-size: 1;
     background-repeat: no-repeat;
-    transition: all .2s ease-in;
-    border-radius: 10px;
+    transition: all .2s ease-in-out;
+    border-radius: 100px;
     display: flex;
     align-items: center;
 }
@@ -101,7 +93,6 @@ header #logo:not(:hover) {
 
 #links, #links > li {
     height: 100%;
-    padding: 0;
     margin: 0;
     text-align: center;
     list-style: none;
@@ -119,6 +110,7 @@ header #logo:not(:hover) {
 }
 
 li > a {
+    padding: 10px;
     text-decoration: none;
     color: white;
     font-weight: 600;
@@ -130,7 +122,7 @@ li > a:hover {
     transition: .3s;
     background-color: salmon;
     color: black;
-    padding: 20px 10px;
+    padding: 30px 15px;
     border-radius: 5px;
     height: 100%;
 }

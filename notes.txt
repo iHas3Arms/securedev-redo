@@ -14,4 +14,8 @@ Make bg of header white on scroll - ✅
 # Fixed it - ✅
 
 Contact Page:
-Make form and follow variables in contact.js
+Make form and follow variables in contact.js - ✅
+
+Cool stuff like in portfolio on sides of contact 
+
+Add social links to footer and somewhere else visible

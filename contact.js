@@ -1,12 +1,57 @@
+let submitBtn = document.getElementById("submit");
+let inputs = document.querySelectorAll("input");
+let textarea = document.querySelector("textarea");
+let checkInputsReminder = document.getElementById("check-inputs-reminder");
+
+submitBtn.addEventListener("click", (e) => {
+    let filled = true;
+
+    inputs.forEach(input => {
+        if (input.value.length < 3) {
+            filled = false;
+            input.value = "";
+            input.placeholder = input.placeholder.split("*")[0] + "*";
+            input.style.outline = "1px solid red";
+        }
+        if (!input.checkValidity()) {
+            filled = false;
+            input.value = "";
+            input.placeholder = input.placeholder.split("*")[0] + "*";
+            input.style.outline = "1px solid red";
+        } else {
+            if (input.placeholder.includes("*")) {
+                input.placeholder = input.placeholder.split("*")[0];
+                input.style.outline = "none";
+            }
+        }
+    });
+    if (!filled) {
+        checkInputsReminder.innerText = "*Make sure all of your inputs are correctly filled out";
+        checkInputsReminder.style.color = "rgb(215, 18, 18)";
+        return checkInputsReminder.style.opacity = "1";
+    }
+
+    checkInputsReminder.style.color = "#1b1d30";
+    checkInputsReminder.style.opacity = "1";
+    checkInputsReminder.style.scale = "1.1";
+    // submitToAPI(e); uncomment when finished
+
+
+
+    checkInputsReminder.innerText = "Your query has been submitted";
+    inputs.forEach(input => input.value = "");
+    textarea.value = "";
+});
+
 function submitToAPI(e) {
     e.preventDefault();
     var URL = "https://zt3tg9rdcc.execute-api.eu-west-2.amazonaws.com/production/email";
 
 
-    var name = document.getElementById("name-input").value;
-    var message = document.getElementById("message-input").value;
-    var email = document.getElementById("email-input").value;
-    var subject = document.getElementById("subject-input").value;
+    var name = document.getElementById("name").value;
+    var message = document.getElementById("message").value;
+    var email = document.getElementById("email").value;
+    var subject = document.getElementById("subject").value;
 
     var data = {
         name : name,

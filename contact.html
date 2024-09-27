@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureDev | Contact</title>
+    <link rel="icon" href="img/logos/securedev.ico">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <button class="scroll-to-top" onclick="scrollToTop()">
+        <div class="arrow-line"></div>
+        <div class="arrow-line"></div>
+    </button>
+    <header>
+        <div class="important">
+            <div id="logo-container" class="logo-container">
+                <a id="logo-link" href="index.html">
+                    <img src="./img/SecureDev_Logo.png" alt="SecureDev Logo" id="logo">
+                </a>
+            </div>
+            <button id="drop-down-btn" onclick="changeStateOfDropDown()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </button>
+        </div>
+        <ul id="links">
+            <li><a id="home-link" href="index.html">HOME</a></li>
+            <li><a id="about-link" href="index.html">ABOUT</a></li>
+            <li><a id="services-link" href="index.html">SERVICES</a></li>
+            <li><a id="project-link" href="index.html">PROJECT</a></li>
+            <li><a id="team-link" href="index.html">OUR TEAM</a></li>
+        </ul>
+        <!-- <ul class="contacts">
+            <li>Facebook: SecureDev LTD</li>
+            <li>Twitter: SecureDev LTD</li>
+            <li>LinkedIn: SecureDev LTD</li>
+            <li>Email: support@securedev.co.uk</li>
+        </ul> -->
+        <button id="contact-btn" onclick="window.location.href='contact.html'">Contact</button>
+    </header>
+
+    <main>
+        <div class="form-heading heading">
+            <h2 class="subheading">Contact Us</h2>
+            <h2 class="big-subheading">Fill this form to submit your inquiry</h2>
+        </div>
+        <div class="contact-sheet">
+            <div class="contact-info">
+                <span class="big-subheading our-office-contact">Our Office</span><br>
+                <hr class="mini-separator office">
+                SecureDev Ltd, Think Park<br>
+                Mosley Road, Trafford Park<br>
+                Manchester, UK, M17 1FQ<br><br>
+                contactus@securedev.uk<br>
+                0161 518 7669
+            </div>
+            <form>
+                <div class="name-and-email">
+                    <input type="text" placeholder="Your Name" id="name">
+                    <input type="email" placeholder="Your Email" id="email">
+                </div>
+                <input type="text" placeholder="Subject" id="subject">
+                <textarea name="message" id="message" placeholder="Message" rows="3"></textarea>
+                <button type="button" id="submit">Submit Query</button>
+                <span id="check-inputs-reminder">*Make sure all of your inputs are correctly filled out</span>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+
+        <div class="footer-content">
+            <!-- GET IN TOUCH -->
+            
+            <div class="get-in-touch">
+                <h2 class="subheading" id="in-touch-heading">Get In Touch</h2>
+                <p id="address">SecureDev Ltd, Think Park
+                    Mosley Road,<br>Trafford Park
+                    Manchester, UK, M17 1FQ</p>
+                <br>
+                <p id="email">contactus@securedev.uk</p>
+                <br>
+                <p id="phone-number">0161 518 7669</p>
+                <div class="social-media">
+                
+                </div>
+            </div>
+        
+            <!-- QUICK LINKS -->
+        
+            <div class="quick-links">
+                <h2 class="subheading" id="quick-links-heading">Quick Links</h2>
+                <ul id="quick-links-ul">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about-us">About Us</a></li>
+                    <li><a href="index.html#our-services">Services</a></li>
+                    <li><a href="index.html#our-projects">Projects</a></li>
+                    <li><a href="index.html#exec-team">Our Team</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <span id="copyright-text">Copyright © 2024 SecureDev. All Rights Reserved</span>
+        </div>
+    </footer>
+</body>
+<script src="drop-down.js"></script>
+<script src="header-scroll.js"></script>
+<script src="contact.js"></script>
+<script src="fadein-animations.js"></script>
+</html>

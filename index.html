@@ -15,8 +15,6 @@
         <div id="scrollbar"></div>
     </div>
 
-    <img id="face" src="img/james.jpg" alt="Just my face" style="display:none;">
-
     <button class="scroll-to-top" onclick="scrollToTop()">
         <div class="arrow-line"></div>
         <div class="arrow-line"></div>
@@ -47,7 +45,7 @@
             <li>LinkedIn: SecureDev LTD</li>
             <li>Email: support@securedev.co.uk</li>
         </ul> -->
-        <button id="contact-btn">Contact</button>
+        <button id="contact-btn" onclick="window.location.href = 'contact.html'">Contact</button>
     </header>
 
     <!--MAIN BODY-->
@@ -290,38 +288,47 @@
 
     <footer>
 
-        <!-- GET IN TOUCH -->
-
-        <div class="get-in-touch">
-            <h2 class="subheading">Get In Touch</h2>
-            <p id="address">SecureDev Ltd, Think Park
-                Mosley Road,<br>Trafford Park
-                Manchester, UK, M17 1FQ</p>
-            <br>
-            <p id="email">contactus@securedev.uk</p>
-            <br>
-            <p id="phone-number">0161 518 7669</p>
-            <div class="social-media">
-
+        <div class="footer-content">
+            <!-- GET IN TOUCH -->
+            
+            <div class="get-in-touch">
+                <h2 class="subheading" id="in-touch-heading">Get In Touch</h2>
+                <p id="address">SecureDev Ltd, Think Park
+                    Mosley Road,<br>Trafford Park
+                    Manchester, UK, M17 1FQ</p>
+                <br>
+                <p id="email">contactus@securedev.uk</p>
+                <br>
+                <p id="phone-number">0161 518 7669</p>
+                <div class="social-media">
+                
+                </div>
+            </div>
+        
+            <!-- QUICK LINKS -->
+        
+            <div class="quick-links">
+                <h2 class="subheading" id="quick-links-heading">Quick Links</h2>
+                <ul id="quick-links-ul">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about-us">About Us</a></li>
+                    <li><a href="index.html#our-services">Services</a></li>
+                    <li><a href="index.html#our-projects">Projects</a></li>
+                    <li><a href="index.html#exec-team">Our Team</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
             </div>
         </div>
-
-        <!-- QUICK LINKS -->
-
-        <div class="quick-links">
-            <h2 class="subheading" id="quick-links-heading">Quick Links</h2>
-            <ul id="quick-links-ul">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about-us">About Us</a></li>
-                <li><a href="index.html#our-services">Services</a></li>
-                <li><a href="index.html#our-projects">Projects</a></li>
-                <li><a href="index.html#exec-team">Our Team</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
+        <div class="copyright">
+            <span id="copyright-text">Copyright © 2024 SecureDev. All Rights Reserved</span>
         </div>
     </footer>
 </body>
-<script src="drop-down.js" fe></script>
+<script src="scrollbar.js"></script>
+<script src="drop-down.js"></script>
 <script src="animation.js"></script>
+<script src="link-scroll.js"></script>
 <script src="script.js"></script>
+<script src="fadein-animations.js"></script>
+<script src="header-scroll.js"></script>
 </html>
