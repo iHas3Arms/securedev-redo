@@ -162,10 +162,9 @@ p {
     width: max(360px, 20vw);
     border-radius: 20px;
     transform-style: preserve-3d;
-    transition: all .5s ease;
+    transition: all .1s linear;
     cursor: pointer;
-    box-shadow: 5px 5px 10px rgb(31, 31, 31),
-                -5px 5px 10px rgb(31, 31, 31);
+    box-shadow: 0 5px 20px black;
 }
 
 /* This is a SICK effect, but don't use it

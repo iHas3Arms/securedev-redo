@@ -134,6 +134,24 @@ li > a:not(:hover) {
     padding: inherit;
 }
 
+.contacts {
+    display: flex;
+    gap: 20px;
+}
+
+.facebook, .twitter, .linkedin {
+    height: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 3px solid salmon;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.facebook { background-image: url("./img/contact/facebook.png"); }
+.twitter { background-image: url("./img/contact/twitter.png"); }
+.linkedin { background-image: url("./img/contact/linkedin.png"); }
+
 #drop-down-btn {
     height: 40px;
     width: 50px;

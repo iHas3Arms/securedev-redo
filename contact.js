@@ -12,17 +12,18 @@ submitBtn.addEventListener("click", (e) => {
             input.value = "";
             input.placeholder = input.placeholder.split("*")[0] + "*";
             input.style.outline = "1px solid red";
+            return;
         }
         if (!input.checkValidity()) {
             filled = false;
             input.value = "";
             input.placeholder = input.placeholder.split("*")[0] + "*";
             input.style.outline = "1px solid red";
-        } else {
-            if (input.placeholder.includes("*")) {
-                input.placeholder = input.placeholder.split("*")[0];
-                input.style.outline = "none";
-            }
+            return;
+        }
+        if (input.placeholder.includes("*")) {
+            input.placeholder = input.placeholder.split("*")[0];
+            input.style.outline = "none";
         }
     });
     if (!filled) {
@@ -35,8 +36,6 @@ submitBtn.addEventListener("click", (e) => {
     checkInputsReminder.style.opacity = "1";
     checkInputsReminder.style.scale = "1.1";
     // submitToAPI(e); uncomment when finished
-
-
 
     checkInputsReminder.innerText = "Your query has been submitted";
     inputs.forEach(input => input.value = "");
@@ -77,6 +76,5 @@ function submitToAPI(e) {
         }
     }
 
- document.getElementById('contact-form').reset();
-
+    document.getElementById('contact-form').reset();
 } 

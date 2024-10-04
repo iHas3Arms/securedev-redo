@@ -16,7 +16,6 @@ body {
 
 body > main {
     padding: 45px 20px;
-    height: max-content;
     justify-content: center;
     align-items: center;
 }
@@ -24,13 +23,16 @@ body > main {
 .contact-sheet {
     display: flex;
     height: max-content;
+    min-height: 50vh;
     justify-content: center;
+    align-items: center;
     width: 100%;
     flex-wrap: wrap;
     gap: clamp(3vw, 3vw, 25px);
 }
 
 .contact-info {
+    height: 100%;
     font-size: 1.25rem;
     padding: 5px 50px;
     line-height: 2rem;
@@ -42,6 +44,8 @@ body > main {
 }
 
 form {
+    position: relative;
+    bottom: 10px;
     padding: 5px 10px;
     font-family: inherit;
     height: min-content;
@@ -71,7 +75,7 @@ form > textarea {
     font-size: 1rem;
     font-family: inherit;
     width: 100%;
-    min-height: 40px;
+    min-height: 50px;
     max-height: 120px;
     resize: vertical;
     padding: 8px 8px;
@@ -106,7 +110,7 @@ form input:focus, textarea:focus {
 
 #submit {
     width: 25%;
-    min-width: 50px;
+    min-width: 100px;
     background-color: var(--logo-bg-color);
     font-weight: 600;
     font-family: inherit;

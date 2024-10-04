@@ -9,5 +9,5 @@ let scrollPageHeight = pageHeight - window.innerHeight;
 
 document.addEventListener("scroll", function() {
     let percentScrolledDown = window.scrollY / scrollPageHeight;
-    scrollbar.style.scale = percentScrolledDown + " 1";
+    scrollbar.style.scale = percentScrolledDown;
 });
